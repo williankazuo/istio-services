@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-c-deployment
+  labels:
+    app: service-c
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-c
+  template:
+    metadata:
+      labels:
+        app: service-c
+    spec:
+      containers:
+        - name: service-c
+          image: williankazuo/service-c
+          resources:
+            limits:
+              memory: "64Mi"
+              cpu: "64m"
+          ports:
+            - containerPort: 3000
