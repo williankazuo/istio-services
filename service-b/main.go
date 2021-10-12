@@ -9,5 +9,9 @@ func main() {
 		return c.SendString("pong")
 	})
 
+	app.Get("/hello", func(c *fiber.Ctx) error {
+		return c.SendString("Hello From service-b")
+	})
+
 	app.Listen(":3001")
 }
