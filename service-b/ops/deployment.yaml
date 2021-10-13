@@ -23,3 +23,6 @@ spec:
               cpu: "64m"
           ports:
             - containerPort: 3001
+          envFrom:
+            - configMapRef:
+                name: service-b

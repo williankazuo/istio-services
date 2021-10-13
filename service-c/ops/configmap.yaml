@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: service-c
+data:
+  URL_SERVICE_A: http://service-a-service:3000
+  URL_SERVICE_C: http://service-b-service:3001
