@@ -6,5 +6,6 @@ spec:
   selector:
     app: service-b
   ports:
-    - port: 3001
+    - name: http
+      port: 3001
       targetPort: 3001
